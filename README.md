@@ -1,6 +1,6 @@
 # Progressive Web Application
-Repository link: https://github.com/AaronVenema/progressiveWebApplication <br />
-Deployed link : https://progressivewebapplication.herokuapp.com/ <br />
+<br> Repository link: https://github.com/AaronVenema/progressiveWebApplication <br>
+<br> Deployed link : https://progressivewebapplication.herokuapp.com/ <br>
 ## Table of Contents
 * [Screenshot](#Screenshot)
 
