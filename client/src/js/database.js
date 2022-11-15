@@ -14,10 +14,10 @@ const initdb = async () =>
 
 export const putDb = async (content) => {
   const DB_VAR = await openDB('jate', 1);
-  const TX_VAR = jateDb.transaction('jate', 'readwrite');
-  const STORE_VAR = tx.objectStore('jate');
-  const VAR_NAME = store.put({ id: 1, value: content });
-  const result = await request;
+  const TX_VAR = DB_VAR.transaction('jate', 'readwrite');
+  const STORE_VAR = TX_VAR.objectStore('jate');
+  const VAR_NAME = STORE_VAR.put({ id: 1, value: content });
+  const result = await VAR_NAME;
   console.log('🚀 - data saved to the database', result.value);
 };
 
@@ -25,7 +25,7 @@ export const getDb = async () => {
   const DB_VAR = await openDB('jate', 1);
   const TX_VAR = DB_VAR.transaction('jate', 'readonly');
   const STORE_VAR = TX_VAR.objectStore('jate')
-  const request = store.get(1);
+  const request = STORE_VAR.get(1);
   const result = await request;
   result
     ? console.log('🚀 - data retrieved from the database', result.value)
