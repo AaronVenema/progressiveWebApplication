@@ -26,9 +26,9 @@ warmStrategyCache({
 
 registerRoute(({ request }) => request.mode === 'navigate', pageCache);
 
-const path= ['style', 'script', 'worker']
+const pathTypes= ['style', 'script', 'worker']
 
-registerRoute( ({ request }) => path.includes(request.destination),
+registerRoute( ({ request }) => pathTypes.includes(request.destination),
   new StaleWhileRevalidate({
     cacheName: 'asset-cache',
     plugins: [
